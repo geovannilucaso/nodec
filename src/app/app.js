@@ -200,11 +200,12 @@ class App extends Component{
                                     <div className="card" key={car._id}>
                                         <div className="card-image">
                                         <img  src={car.image} />
-                                        <span className="card-title" style={{color: "black", fontWeight:"bold"}}>{car.id} | {car.make} / {car.model}</span>
+                                        
                                         
                                             <button onClick={() => this.editCar(car._id)} className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">edit</i></button>
                                         </div>
                                         <div className="card-content" style={car.maintenance? {backgroundColor: "#FFBEBB"}:{backgroundColor: "#D1FFBB"}}>
+                                        <span className="card-title" style={{color: "black", fontWeight:"bold"}}>{car.id} | {car.make} / {car.model}</span>
                                         <p>{car.maintenance?"In Maintance":"Maintance Finished"}</p>
                                         <p><span style={{ fontWeight:"bold"}}>KM: </span> {car.km}</p>
                                         <p><span style={{ fontWeight:"bold"}}>Estimated Date: </span> {car.estimatedate}</p>
